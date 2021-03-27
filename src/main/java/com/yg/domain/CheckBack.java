@@ -8,17 +8,27 @@ public class CheckBack implements Serializable {
 
     private Integer id;
     private boolean result;
+    private String reason;
     private Application app;
     private Manager manager;
 
     public CheckBack() {
     }
 
-    public CheckBack(Integer id, boolean result, Application app, Manager manager) {
+    public String getReason() {
+        return reason;
+    }
+
+    public CheckBack(Integer id, boolean result, String reason, Application app, Manager manager) {
         this.id = id;
         this.result = result;
+        this.reason = reason;
         this.app = app;
         this.manager = manager;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
     }
 
     public Integer getId() {

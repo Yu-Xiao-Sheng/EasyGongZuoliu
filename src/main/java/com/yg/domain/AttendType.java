@@ -8,13 +8,23 @@ public class AttendType implements Serializable {
 
     private Integer id;
     private String name;
+    private Double amount;
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
 
     public AttendType() {
     }
 
-    public AttendType(Integer id, String name) {
+    public AttendType(Integer id, String name, Double amount) {
         this.id = id;
         this.name = name;
+        this.amount = amount;
     }
 
     public Integer getId() {

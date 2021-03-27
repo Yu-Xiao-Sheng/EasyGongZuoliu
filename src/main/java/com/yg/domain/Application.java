@@ -9,16 +9,28 @@ public class Application implements Serializable {
     private Integer id;
     private String reason;
     private Attend attend;
+    private Boolean result;
     private AttendType type;
 
-    public Application() {
+    public Boolean getResult() {
+        return result;
     }
 
-    public Application(Integer id, String reason, Attend attend, AttendType type) {
+    public void setResult(Boolean result) {
+        this.result = result;
+    }
+
+    public Application(Integer id, String reason, Attend attend, Boolean result, AttendType type) {
         this.id = id;
         this.reason = reason;
         this.attend = attend;
+        this.result = result;
         this.type = type;
+    }
+
+
+
+    public Application() {
     }
 
     public Integer getId() {

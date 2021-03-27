@@ -25,6 +25,12 @@ public class Employee implements Serializable {
     @Range(min = 3000, max = 6000, message = "员工工资必须在3000~6000之间",groups = AddEmployee.class)
     private double salary;
 
+    /**
+     * 上面定义的校验规则分为两组：
+     * 1. 用户登录时的校验规则：需要对name和pass两个成员变量进行数据校验.
+     * 2. 添加员工是的校验规则：需要对name、pass和salary进行数据校验。
+     */
+
     //员工对应的经理
     private Manager manager;
     //员工对应的考勤记录
@@ -122,7 +128,20 @@ public class Employee implements Serializable {
         }else if(!name.equals(other.name))return false;
         if(pass == null){
             if(other.pass != null)return false;
-        }
+        }else if(!pass.equals(other.pass))return false;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pass='" + pass + '\'' +
+                ", salary=" + salary +
+                ", manager=" + manager +
+                ", attends=" + attends +
+                ", payments=" + payments +
+                '}';
     }
 }

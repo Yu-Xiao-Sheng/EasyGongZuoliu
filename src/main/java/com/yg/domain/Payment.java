@@ -10,14 +10,24 @@ public class Payment implements Serializable {
     private Integer id;
     private String payMonth;
     private Employee employee;
+    private Double amount;
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
 
     public Payment() {
     }
 
-    public Payment(Integer id, String payMonth, Employee employee) {
+    public Payment(Integer id, String payMonth, Employee employee, Double amount) {
         this.id = id;
         this.payMonth = payMonth;
         this.employee = employee;
+        this.amount = amount;
     }
 
     public Integer getId() {

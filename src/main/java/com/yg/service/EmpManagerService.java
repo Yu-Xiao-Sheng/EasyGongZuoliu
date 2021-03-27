@@ -11,7 +11,7 @@ import com.yg.vo.PaymentVo;
 
 import java.util.List;
 
-public interface EmpManager {
+public interface EmpManagerService {
     /**
      * 以经理身份来验证登录
      * @param mgr

@@ -45,4 +45,14 @@ public class Manager extends Employee implements Serializable {
     public void setChecks(List<CheckBack> checks) {
         this.checks = checks;
     }
+
+    @Override
+    public String toString() {
+
+        return "Manager{" +
+                "dept='" + dept + '\'' +
+                ", employees=" + employees +
+                ", checks=" + checks +
+                '}';
+    }
 }
